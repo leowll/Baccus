@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/templates/layoutTemplate.xhtml">
+            
+            <ui:define name="content">
+                <f:metadata>
+                    <f:viewAction action="#{backingBean.showShop()}">
+                    </f:viewAction>
+                </f:metadata>
+                <div id="registerForm">
+                        <div class="label">
+                            店舗名
+                        </div>
+                        <div class="input">
+                            <h:outputText value="${backingBean.shop.shopName}"/>
+                        </div>
+                        <div>
+                            <div class="label">
+                                店舗住所
+                            </div>
+                        </div>
+                        <div class="input">
+                            <h:outputText value="${backingBean.shop.shopAddress1}"/>
+                        </div>
+                        <div>
+                            <div class="label">
+                                URL
+                            </div>
+                        </div>
+                        <div>
+                            <h:outputText value="${backingBean.shop.shopUrl}"/>
+                        </div>
+                    </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

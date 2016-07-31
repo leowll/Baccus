@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="resources/css/default.css"/>
+        <h:outputStylesheet name="resources/css/cssLayout.css"/>
+        <title>Facelets Template</title>
+        <style type="text/css">
+            ul.menu{
+                float:left;
+                width:100%;
+                padding:0;
+                margin:auto;
+                list-style-type:none;
+            }
+            a{
+                float:left;
+                width:7em;
+                text-decoration:none;
+                color:white;
+                background-color:purple;
+                padding:0.2em 0.6em;
+                border-right:1px solid white;
+            }
+            a:hover {background-color:#ff3300}
+            li {display:inline}
+            .center_content{
+                width:500px;
+                margin: 20px auto;
+            }
+            #body{
+                width:80%;
+                margin:auto;
+            }
+            #globalTitle{
+                width:500px;
+                margin:auto;
+            }
+            #globalNav{
+                width:500px;
+                margin:auto;
+                height: 20px;
+            }
+            #globalFooter{
+                width:500px;
+                margin:auto;
+                height: 20px;
+            }
+        </style>
+    </h:head>
+
+    <h:body>
+        <div id="body">
+            <div id="top">
+                <ui:insert name="top">
+                    <div id="globalTitle">
+                        <h1>Bacchus!</h1>
+                    </div>
+
+                    <div id="globalNav">
+                        <ul class="menu">
+                            <li><a href="/Baccus">ホーム</a></li>
+                            <li><a href="/Baccus/faces/newshop.xhtml">新規登録</a></li>
+                            <li><a href="/Baccus/faces/shoplist.xhtml">店舗一覧</a></li>
+                        </ul>
+                    </div>
+                </ui:insert>
+            </div>
+
+            <div id="content" class="center_content">
+                <ui:insert name="content">Content</ui:insert>
+            </div>
+
+            <div id="bottom">
+                <ui:insert name="bottom">
+                    <div id="globalFooter">
+                        Powered by Hitachi.
+                    </div>
+
+                </ui:insert>
+            </div>
+        </div>
+    </h:body>
+
+</html>
